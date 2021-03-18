@@ -8,11 +8,14 @@ import store from './store';
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
+import Home from './components/Home';
+import Error from './components/Error';
+
 export const router = new VueRouter({
   mode: 'history',
   routes: [
-    // { path: '/', component: Stepper },
-    // { path: '/error', component: ErrorPage },
+    { path: '/', component: Home },
+    { path: '/error', component: Error },
   ]
 })
 

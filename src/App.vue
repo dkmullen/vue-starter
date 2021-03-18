@@ -1,4 +1,5 @@
 <template>
+<!-- v-app is the essential wrapper to activate vuetify -->
   <v-app>
     <v-app-bar
       app
@@ -38,21 +39,19 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <v-container>
+        <div class="app-wrapper">
+          <router-view></router-view>
+        </div>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
     //
   }),
